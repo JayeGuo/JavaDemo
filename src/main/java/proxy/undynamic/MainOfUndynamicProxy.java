@@ -3,8 +3,8 @@ package proxy.undynamic;
 public class MainOfUndynamicProxy {
 
     public static void main(String[] args) {
-        HouseAuth houseOwner = new HouseOwner();
-        HouseAuth houseAgent = new HouseAgent(houseOwner);
-        houseAgent.visitHouse();
+        CleanThing person = new Person();
+        CleanThing proxyPerson = new CleanProxyPerson(person);
+        proxyPerson.cleanHouse();
     }
 }
