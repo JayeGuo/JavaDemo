@@ -14,7 +14,7 @@ public class LogMethodInterceptor implements MethodInterceptor {
     }
 
     @Override
-    public Object intercept(Object obj, Method method, Object[] args, MethodProxy proxy) throws Throwable {
+    public Object intercept(Object proxyObject, Method method, Object[] args, MethodProxy methodProxy) throws Throwable {
         System.out.println("----- LogMethodInterceptor begin -----");
         Object result = method.invoke(targetObject, args);
         System.out.println("----- LogMethodInterceptor end -----");
